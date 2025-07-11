@@ -16,7 +16,7 @@
   .mobile-menu {
     position: fixed;
     top: 0; left: 0; right: 0;
-    width: 100vw;
+    width: auto;
     height: 100vh;
     background: #f5f6fb;
     z-index: 210;
