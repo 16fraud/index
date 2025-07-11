@@ -50,9 +50,7 @@ if (timelineWrapper && timeline) {
     timelineWrapper.scrollLeft = scrollLeft - walk;
   });
 
-
   timelineWrapper.addEventListener('scroll', () => {
-
     const idx = Math.round(timelineWrapper.scrollLeft / 300);
     if (idx !== activeIndex && idx >= 0 && idx < steps.length) {
       activeIndex = idx;
@@ -67,6 +65,36 @@ if (timelineWrapper && timeline) {
       }
     }
   });
+
+  // Валидация формы: подсветка обязательных полей
+  const form = document.getElementById('contactForm');
+  if (form) {
+    const emailInput = form.email;
+    const phoneInput = form.phone;
+    form.addEventListener('submit', function(e) {
+      var phone = phoneInput.value.trim();
+      var error = document.getElementById('contactError');
+      if (!/^\d{11}$/.test(phone)) {
+        e.preventDefault();
+        error.textContent = 'Введите корректный номер телефона (11 цифр)';
+        error.style.display = 'block';
+        phoneInput.classList.add('input-error');
+      } else {
+        error.style.display = 'none';
+        phoneInput.classList.remove('input-error');
+      }
+    });
+    // Только цифры и максимум 11 символов
+    phoneInput.addEventListener('input', function(e) {
+      let val = phoneInput.value.replace(/\D/g, '');
+      if (val.length > 11) val = val.slice(0, 11);
+      phoneInput.value = val;
+      if (/^\d{11}$/.test(val)) {
+        phoneInput.classList.remove('input-error');
+        document.getElementById('contactError').style.display = 'none';
+      }
+    });
+  }
 
   // Инициализация
   updateActiveStep();
