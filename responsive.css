@@ -347,7 +347,7 @@
 
 @media (max-width: 1000px) {
   html  {
-  max-width: 100vw;
+  max-width: none !important;
   
   }
 }
