@@ -344,9 +344,10 @@
 
 
 
-@media (max-width: 100px) {
-  html, body {
+@media (max-width: 1000px) {
+  html  {
   max-width: 100vw;
+  
   }
 }
 
