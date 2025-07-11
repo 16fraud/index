@@ -124,14 +124,7 @@
   }
 }
 
-
-
-
-@media (max-width: 1000px) {
-  html, body {
-    max-width: 100vw;
-    overflow-x: hidden;
-  }
+@media (max-width: 750px) {
   .container {
     max-width: 100vw;
     width: 100vw;
@@ -238,6 +231,7 @@
   }
 }
 
+
 @media (max-width: 1000px) {
   .contact-illustration img {
     display: none;
@@ -313,9 +307,6 @@
     font-size: 0.85rem;
     padding: 8px 14px 8px 24px;
   }
-}
-
-@media (max-width: 900px) {
   .devops-timeline-section,
   .devops-timeline-section * {
     font-size: 0.89rem;
@@ -334,11 +325,30 @@
   }
 }
 
+@media (max-width: 900px) {
+  .services-extra-title {
+    font-size: 1.3rem;
+    margin-bottom: 28px;
+  }
+  .dark-section-title {
+    font-size: 1.2rem;
+    padding-top: 24px;
+    margin-bottom: 10px;
+  }
+  .dark-section-subtitle {
+    font-size: 0.95rem;
+    padding: 0 8px;
+  }
+}
 
 
 
 
+@media (max-width: 100px) {
+  html, body {
 
+  }
+}
 
 
 
