@@ -375,6 +375,9 @@
   }
 }
 
+.dark-section-title {
+  color: #23272f;
+}
 
 
 
@@ -398,20 +401,112 @@
   
   }
 
-@media (max-width: 500px) {
-  .bg-decor--right {
-    width: 8vw;
-    max-width: 60px;
-    right: -5px;
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 700px) {
+  .section-dark {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .dark-section-title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  .dark-section-subtitle {
+    font-size: 0.95rem;
+    padding: 0 10px;
+    margin-bottom: 50px; /* Добавим паддинг/маргин вниз */
+    display: block;
+  }
+  .features-cross-grid {
+    gap: 16px;
+    min-height: unset;
+  }
+  .feature-card {
+    padding: 24px 0 18px 0;
+    min-height: unset;
+    font-size: 0.95rem;
+    margin-bottom: 29px;
+  }
+  .feature-card-title {
+    font-size: 1.05rem;
+  }
+  .feature-card-subtitle,
+  .feature-card-text,
+  .audit-offer-lead,
+  .audit-offer-extra {
+    font-size: 0.92rem;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .services-extra-title {
+
+    margin-bottom: 70px;
+  }
+  .services-extra-list {
+    gap: 52px;
+  }
+  .service-card {
+    max-width: 98vw;
+    width: 83%;
+    font-size: 0.97rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-title {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    text-align: center;
+    width: 100%;
+    
+  }
+  .contact-subtitle {
+    font-size: 0.98rem;
+    margin-bottom: 22px;
+    text-align: center;
+    padding: 0 8px;
+    display: block;
+  }
+  .contact-form {
+    gap: 10px;
+
+    max-width: 98vw;
+  }
+  .contact-input,
+  .contact-textarea {
+    font-size: 1.25rem;
+    padding: 10px 10px;
   }
 }
 
 
 
-
-
-
-
-
-
-
+@media (max-width: 700px) {
+  .contact-form {
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 50px 80px 10px 80px;
+    gap: 20px;
+  }
+  .contact-input,
+  .contact-textarea {
+    font-size: 1rem;
+    padding: 16px 12px;
+    width: 100%;
+    margin-right: 50px;
+  }
+  
+}
+}
