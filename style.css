@@ -216,7 +216,7 @@ p{
 
 .bg-decor--right {
   bottom: 0;
-  right: 0;
+  right: -70px; /* Утоплено внутрь шапки */
   height: auto;
   z-index: 0;
   width: 28vw;
