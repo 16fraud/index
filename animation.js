@@ -77,4 +77,25 @@
       closeMobileMenu();
     }
   });
+})();
+
+// Открытие/закрытие модального окна чеклиста
+(function() {
+  const openBtn = document.getElementById('openChecklistModal');
+  const modal = document.getElementById('checklistModal');
+  const closeBtn = document.getElementById('closeChecklistModal');
+  if (!openBtn || !modal || !closeBtn) return;
+
+  openBtn.onclick = function(e) {
+    e.preventDefault();
+    modal.style.display = 'flex';
+  };
+  closeBtn.onclick = function() {
+    modal.style.display = 'none';
+  };
+  window.addEventListener('click', function(event) {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
 })(); 

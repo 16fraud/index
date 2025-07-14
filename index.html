@@ -27,7 +27,7 @@
       <div class="header-container">
 
           <div class="logo">
-            <img src="images/icons/logo.png" alt="Flow AI" />
+            <a href="index.html"><img src="images/icons/logo.png" alt="Flow AI" /></a>
           </div>
           <button class="burger-menu" aria-label="Открыть меню" aria-expanded="false" aria-controls="mainNav">
             <span></span><span></span><span></span>
@@ -314,7 +314,11 @@
 
 
     <section class="devops-timeline-section">
-      <h2 class="devops-timeline-title">Как проходит аудит</h2>
+      <div class="container">
+        <h2 class="devops-timeline-title">Как проходит аудит</h2>
+        <p class="devops-timeline-subtitle">Есть ли у вас возможность прозрачно оценить, насколько эффективно организованы IT-процессы, своевременно ли проводятся обновления и обеспечивается безопасность ваших систем, а также насколько обоснованы и оптимальны затраты на работу IT-специалистов?</p>
+        <button class="devops-timeline-checklist-btn" id="openChecklistModal">Чеклист IT-аудита</button>
+      </div>
       <div class="devops-timeline-hint">
         <span>🖐️ Вы можете перетягивать таймлайн</span>
       </div>
@@ -354,6 +358,46 @@
           </div>
         </div>
       </div>
+      <div class="modal-checklist" id="checklistModal" style="display:none;">
+        <div class="modal-checklist-content">
+          <button class="modal-checklist-close" id="closeChecklistModal" aria-label="Закрыть">×</button>
+          <h3 class="modal-checklist-title">СТРУКТУРА И ОТВЕТСТВЕННОСТИ</h3>
+          <ul class="modal-checklist-list">
+            <li>Есть ли чёткое понимание, кто за что отвечает?</li>
+            <li>Кто контролирует обновления, безопасность, оборудование?</li>
+          </ul>
+          <h3 class="modal-checklist-title">ФАКТИЧЕСКАЯ ЗАГРУЗКА</h3>
+          <ul class="modal-checklist-list">
+            <li>Как отслеживается рабочее время IT-сотрудников?</li>
+            <li>Есть ли данные об их загрузке и приоритетах?</li>
+          </ul>
+          <h3 class="modal-checklist-title">ОБНОВЛЕНИЯ И БЕЗОПАСНОСТЬ</h3>
+          <ul class="modal-checklist-list">
+            <li>Когда в последний раз обновлялась 1С?</li>
+            <li>Есть ли регламенты на резервное копирование?</li>
+            <li>Кто имеет доступ к базе данных?</li>
+          </ul>
+          <h3 class="modal-checklist-title">ИНЦИДЕНТЫ И ОШИБКИ</h3>
+          <ul class="modal-checklist-list">
+            <li>Как фиксируются технические проблемы?</li>
+            <li>Каков средний срок их устранения?</li>
+          </ul>
+          <h3 class="modal-checklist-title">ЗАТРАТЫ</h3>
+          <ul class="modal-checklist-list">
+            <li>Сколько стоит IT-функция компании в месяц?</li>
+            <li>Есть ли понимание, где деньги работают, а где — “сгорают”?</li>
+          </ul>
+          <h3 class="modal-checklist-title">ЗАВИСИМОСТИ</h3>
+          <ul class="modal-checklist-list">
+            <li>Есть ли “незаменимые” сотрудники?</li>
+            <li>Можете ли вы уволить 1 человека без риска для бизнеса?</li>
+          </ul>
+          <div class="modal-checklist-summary">
+            Итог: если хотя бы на 3 из 6 блоков вы не уверены — аудит необходим.
+          </div>
+        </div>
+      </div>
+      
     </section>
 
     <section class="services-extra-section">
@@ -434,8 +478,8 @@
       <div class="footer-bottom"> </div>
     </div>
         <div class="footer-links">
-          <a href="#" class="footer-link">Политика приватности</a>
-          <a href="#" class="footer-link">Правила конфиденциальности</a>
+          <a href="privacy.html" class="footer-link">Политика приватности</a>
+          <a href="confidential.html" class="footer-link">Правила конфиденциальности</a>
         </div>
       </div>
     </footer> 
