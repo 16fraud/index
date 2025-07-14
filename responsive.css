@@ -510,3 +510,31 @@
   
 }
 }
+
+@media (max-width: 600px) {
+  .devops-timeline-checklist-btn {
+    width: 85vw !important;
+    max-width: 220px !important;
+    font-size: 0.88rem !important;
+    padding: 12px 0 7px 0 !important;
+    margin: 0 auto 60px auto !important;
+    display: block;
+    box-sizing: border-box;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .devops-timeline-title {
+    font-size: 1.05rem !important;
+    margin-bottom: 14px !important;
+    text-align: center !important;
+  }
+  .devops-timeline-subtitle {
+    font-size: 0.82rem !important;
+    margin: 40px 0 !important;
+    text-align: center !important;
+  }
+}
+
+
