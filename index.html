@@ -24,23 +24,38 @@
     <a href="#" class="btn mobile-menu-btn">Get started</a>
   </nav>
   <header class="main-header">
+    <div class="region-select-bar">
+      <span class="region-icon"> 
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M9 17C9 17 15 10.8 15 6.75C15 3.57436 12.4256 1 9.25 1C6.07436 1 3.5 3.57436 3.5 6.75C3.5 10.8 9 17 9 17Z" stroke="#23272f" stroke-width="1.5" fill="white"/>
+          <circle cx="9" cy="7" r="2" stroke="#23272f" stroke-width="1.2" fill="white"/>
+        </svg>
+      </span>
+      <span class="region-label">Ваш регион:</span>
+      <button class="region-current" id="regionSelectBtn" type="button">Москва</button>
+      <div class="region-dropdown" id="regionDropdown" style="display:none;">
+        <input type="text" id="regionSearchInput" placeholder="Поиск города..." autocomplete="off" />
+        <ul id="regionList">
+          <!-- Сюда будут подставляться города -->
+        </ul>
+      </div>
+    </div>
       <div class="header-container">
 
           <div class="logo">
-            <a href="index.html"><img src="images/icons/logo.png" alt="Flow AI" /></a>
+            <a href="index.html"><img src="images/icons/logo.png" alt="afftomatizator" /></a>
           </div>
           <button class="burger-menu" aria-label="Открыть меню" aria-expanded="false" aria-controls="mainNav">
             <span></span><span></span><span></span>
           </button>
           <nav class="main-nav" id="mainNav">
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Research</a></li>
-              <li><a href="#">Content</a></li>
-              <li><a href="#">Company</a></li>
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">Услуги</a></li>
+              <li><a href="#">О нас</a></li>
             </ul>
           </nav>
-          <a href="#" class="btn">Get started</a>
+          <a href="#" class="btn">Заказать звонок</a>
         </div>
     </header>
     <section class="hero-section">
@@ -51,12 +66,33 @@
             <p class="hero-subtitle">Получите объективную картину за 3 дня: выявим слабые места, покажем
               риски, предложим решения.
               </p>
-            <a href="#" class="btn hero-btn">Консультация<span class="hero-btn-icon"><svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 15L13 9L7 3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 15L19 9L13 3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            <a href="#contact" class="btn hero-btn">Консультация<span class="hero-btn-icon"><svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 15L13 9L7 3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 15L19 9L13 3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
           </div>
         </div>
       </div>
-      <img src="https://cdn.prod.website-files.com/668e98670ff5e1901b2fb530/67c064cba6f589c26901df9d_8f966622f09ac118839b81caeb512cca_isoaaro_main_nobg.webp" alt="" class="bg-decor bg-decor--right">
+      
       <img src="https://cdn.prod.website-files.com/668e98670ff5e1901b2fb530/67c067ddd5ccb44027448ede_f4cce00f3f45c5a8aaa1237f945beb5a_crop2.2.webp" alt="" class="bg-decor bg-decor--left">
+    </section>
+
+    <section class="problem-section">
+      <img src="https://cdn.prod.website-files.com/668e98670ff5e1901b2fb530/67c064cba6f589c26901df9d_8f966622f09ac118839b81caeb512cca_isoaaro_main_nobg.webp" alt="" class="bg-decor bg-decor--right">
+      <div class="problem-inner">
+        <div class="problem-illustration">
+          <img src="images/icons/warning.svg" alt="IT проблема" />
+        </div>
+        <div class="problem-content">
+          <div class="problem-accent-line"></div>
+          <h2 class="problem-title">Когда IT-отдел управляет компанией</h2>
+          <p class="problem-text">
+            Часто собственники не понимают, что на самом деле происходит в IT. Сотрудники становятся незаменимы, процессы непрозрачны, расходы растут, а желаемых результатов нет. Это ловушка зависимости. Мы поможем из неё выбраться — быстро, безопасно, без потерь и затруднений
+          </p>
+        </div>
+      </div>
+    </section>
+
+   
+
+    <div class="reasons-bg">
       <div class="container reasons-container">
         <h2 class="reasons-title">Услуги</h2>
         <div class="reasons-list">
@@ -106,8 +142,120 @@
           </div>
         </div>
       </div>
-     
+    </div>
 
+    <section class="section-dark">
+      <div class="container">
+        <h2 class="dark-section-title">IT-аудит, который экономит ваш бюджет</h2>
+        <p class="dark-section-subtitle">
+          Комплексная диагностика, выявление уязвимостей и рекомендации по оптимизации IT-инфраструктуры — быстро, прозрачно, с гарантией результата.
+        </p>
+      </div>
+      <img src="https://cdn.prod.website-files.com/668e98670ff5e1901b2fb530/67c1a7eaeb8f05097abe91e4_f2a513f02929fb07653b95f05989f8d7_Vector%20%283%29%20%282%29.webp"
+          alt="" class="section-dark-decor">
+      <div class="features-cross-grid">
+        <div class="feature-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="IT аудит" class="feature-card-img" style="width: 96px; height: 96px; margin: 0 auto 24px auto; display: block;">
+          <div class="feature-card-text">
+            <p class="audit-offer-lead">
+              Проведём аудит, выявим уязвимости и риски, дадим рекомендации — без сбоев.
+            </p>
+            <p class="audit-offer-extra">
+              Всё объясним простым языком и покажем, где можно сэкономить и как защитить бизнес.
+            </p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="Отчет" class="feature-card-img" style="width: 96px; height: 96px; margin: 0 auto 24px auto; display: block;">
+          <div class="feature-card-text">
+            <p class="audit-offer-lead">
+              Готовим понятный отчет бизнеса
+            </p>
+            <p class="audit-offer-extra">
+              Только суть и цифры — без воды.
+            </p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" alt="Гаечный ключ" class="feature-card-img" style="width: 96px; height: 96px; margin: 0 auto 24px auto; display: block;">
+          <div class="feature-card-text">
+            <p class="audit-offer-lead">
+              Делаем эффективные предложения по оптимизации
+            </p>
+            <p class="audit-offer-extra">
+              Помогаем снизить зависимость от IT-подрядчиков и повысить прозрачность процессов.
+            </p>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Удаляем секцию devops-timeline-section и добавляем новую -->
+    <section class="audit-steps-section">
+      <div class="container">
+        <h2 class="audit-steps-title">Этапы аудита IT-инфраструктуры</h2>
+        <div class="audit-steps-list">
+          <div class="audit-step">
+            <div class="audit-step-num">1</div>
+            <div class="audit-step-text">Знакомство — короткий бриф с вами</div>
+          </div>
+          <div class="audit-step">
+            <div class="audit-step-num">2</div>
+            <div class="audit-step-text">Сбор информации (через удалённый доступ)</div>
+          </div>
+          <div class="audit-step">
+            <div class="audit-step-num">3</div>
+            <div class="audit-step-text">Внутренний технический анализ</div>
+          </div>
+          <div class="audit-step">
+            <div class="audit-step-num">4</div>
+            <div class="audit-step-text">Подготовка простого бизнес-отчёта</div>
+          </div>
+          <div class="audit-step">
+            <div class="audit-step-num">5</div>
+            <div class="audit-step-text">Онлайн-встреча: обсуждаем результаты</div>
+          </div>
+          <div class="audit-step">
+            <div class="audit-step-num">6</div>
+            <div class="audit-step-text">Рекомендации + предложения по улучшению</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-extra-section">
+      <div class="container">
+        <h2 class="services-extra-title">Можно дополнить услугами</h2>
+        <div class="services-extra-list">
+          <div class="service-card">
+            <div class="service-card-icon">
+              <img src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png" alt="Поддержка" />
+            </div>
+            <div class="service-card-content">
+              <div class="service-card-title">Поддержка 1С</div>
+              <div class="service-card-desc">Обновления, настройка, кастомизация</div>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-card-icon">
+              <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" alt="Аудит CI/CD" />
+            </div>
+            <div class="service-card-content">
+              <div class="service-card-title">Аутсорсинг IT-специалистов</div>
+              <div class="service-card-desc">Почасовая помощь по задачам</div>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-card-icon">
+              <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="DataOps" />
+            </div>
+            <div class="service-card-content">
+              <div class="service-card-title">Разработка решений под 1С</div>
+              <div class="service-card-desc"> Автоматизация под бизнес-процессы</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -217,226 +365,14 @@
       </div>
     </section>
 
-    <section class="problem-section">
-      <div class="problem-inner">
-        <div class="problem-illustration">
-          <img src="images/icons/warning.svg" alt="IT проблема" />
-        </div>
-        <div class="problem-content">
-          <div class="problem-accent-line"></div>
-          <h2 class="problem-title">Когда IT-отдел управляет компанией</h2>
-          <p class="problem-text">
-            Часто собственники не понимают, что происходит в IT.
-            Сотрудники “незаменимы”, процессы непрозрачны, расходы растут, а желаемых результатов нет.
-            Это ловушка зависимости. Мы поможем из неё выбраться — быстро, без конфликта, без потерь.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-dark">
-      <div class="container">
-        <h2 class="dark-section-title">IT-аудит, который экономит ваш бюджет</h2>
-        <p class="dark-section-subtitle">
-          Комплексная диагностика, выявление уязвимостей и рекомендации по оптимизации IT-инфраструктуры — быстро, прозрачно, с гарантией результата.
-        </p>
-      </div>
-      <img src="https://cdn.prod.website-files.com/668e98670ff5e1901b2fb530/67c1a7eaeb8f05097abe91e4_f2a513f02929fb07653b95f05989f8d7_Vector%20%283%29%20%282%29.webp"
-          alt="" class="section-dark-decor">
-      <div class="features-cross-grid features-cross-grid--top">
-  <div class="feature-card">
-  <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="IT аудит" class="feature-card-img" style="width: 96px; height: 96px; margin: 0 auto 24px auto; display: block;">
-  <div class="feature-card-text">
-    <p class="audit-offer-lead">
-      Проведём аудит, выявим уязвимости и риски, дадим рекомендации — без сбоев.
-    </p>
-    <p class="audit-offer-extra">
-      Всё объясним простым языком и покажем, где можно сэкономить и как защитить бизнес.
-    </p>
-  </div>
-</div>
-  <div class="feature-card">
-    <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="Отчет" class="feature-card-img" style="width: 96px; height: 96px; margin: 0 auto 24px auto; display: block;">
-    <div class="feature-card-text">
-      <p class="audit-offer-lead">
-        Готовим понятный отчет бизнеса
-      </p>
-      <p class="audit-offer-extra">
-        Только суть и цифры — без воды.
-      </p>
-    </div>
-  </div>
-</div>
-<div class="features-cross-center-wrapper">
-  <div class="features-cross-lines">
-    <svg width="600" height="600" viewBox="0 0 600 600" fill="none">
-      <!-- Верхняя линия -->
-      <line x1="300" y1="252" x2="300" y2="0" stroke="rgba(255,255,255,0.8)" stroke-width="2"/>
-      <!-- Нижняя линия -->
-      <line x1="300" y1="348" x2="300" y2="600" stroke="rgba(255,255,255,0.8)" stroke-width="2"/>
-      <!-- Левая линия -->
-      <line x1="252" y1="300" x2="0" y2="300" stroke="rgba(255,255,255,0.8)" stroke-width="2"/>
-      <!-- Правая линия -->
-      <line x1="348" y1="300" x2="600" y2="300" stroke="rgba(255,255,255,0.8)" stroke-width="2"/>
-    </svg>
-  </div>
-  <div class="features-cross-center">
-    <div class="circle-logo-bg">
-      <img src="images/icons/rec.webp" alt="Логотип" class="circle-logo-img">
-    </div>
-  </div>
-</div>
-<div class="features-cross-grid features-cross-grid--bottom">
-  <div class="feature-card">
-    <img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" alt="Гаечный ключ" class="feature-card-img" style="width: 96px; height: 96px; margin: 0 auto 24px auto; display: block;">
-    <div class="feature-card-text">
-      <p class="audit-offer-lead">
-        Делаем эффективные предложения по оптимизации
-      </p>
-      <p class="audit-offer-extra">
-        Помогаем снизить зависимость от IT-подрядчиков и повысить прозрачность процессов.
-      </p>
-    </div>
-  </div>
-  <div class="feature-card">
-    <img src="https://cdn-icons-png.flaticon.com/512/681/681494.png" alt="Сотрудничество" class="feature-card-img" style="width: 96px; height: 96px; margin: 0 auto 24px auto; display: block;">
-    <div class="feature-card-text">
-      <p class="audit-offer-lead">
-        Предлагаем усиление через аутсорсинг.
-      </p>
-      <p class="audit-offer-extra">
-        Наши специалисты помогут закрыть пробелы
-      </p>
-    </div>
-  </div>
-</div>
-    </section>
+    
 
 
-    <section class="devops-timeline-section">
-      <div class="container">
-        <h2 class="devops-timeline-title">Как проходит аудит</h2>
-        <p class="devops-timeline-subtitle">Есть ли у вас возможность прозрачно оценить, насколько эффективно организованы IT-процессы, своевременно ли проводятся обновления и обеспечивается безопасность ваших систем, а также насколько обоснованы и оптимальны затраты на работу IT-специалистов?</p>
-        <button class="devops-timeline-checklist-btn" id="openChecklistModal">Чеклист IT-аудита</button>
-      </div>
-      <div class="devops-timeline-hint">
-        <span>🖐️ Вы можете перетягивать таймлайн</span>
-      </div>
-      <div class="devops-timeline-wrapper">
-        <div class="devops-timeline" id="devopsTimeline">
-          <div class="devops-step active">
-            <div class="devops-step-card">Знакомство — короткий бриф с вами</div>
-            <div class="devops-step-circle">1</div>
-          </div>
-          <div class="devops-step">
-            <div class="devops-step-card">Сбор информации (через удалённый доступ)</div>
-            <div class="devops-step-circle">2</div>
-          </div>
-          <div class="devops-step">
-            <div class="devops-step-card">Внутренний технический анализ</div>
-            <div class="devops-step-circle">3</div>
-          </div>
-          <div class="devops-step">
-            <div class="devops-step-card">Подготовка простого бизнес-отчёта</div>
-            <div class="devops-step-circle">4</div>
-          </div>
-          <div class="devops-step">
-            <div class="devops-step-card">Онлайн-встреча: обсуждаем результаты</div>
-            <div class="devops-step-circle">5</div>
-          </div>
-          <div class="devops-step">
-            <div class="devops-step-card">Рекомендации + предложения по улучшению</div>
-            <div class="devops-step-circle">6</div>
-          </div>
-          <div class="devops-step">
-            <div class="devops-step-card">Внутренний технический анализ</div>
-            <div class="devops-step-circle">7</div>
-          </div>
-          <div class="devops-step">
-            <div class="devops-step-card">Подготовка простого бизнес-отчёта</div>
-            <div class="devops-step-circle">8</div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-checklist" id="checklistModal" style="display:none;">
-        <div class="modal-checklist-content">
-          <button class="modal-checklist-close" id="closeChecklistModal" aria-label="Закрыть">×</button>
-          <h3 class="modal-checklist-title">СТРУКТУРА И ОТВЕТСТВЕННОСТИ</h3>
-          <ul class="modal-checklist-list">
-            <li>Есть ли чёткое понимание, кто за что отвечает?</li>
-            <li>Кто контролирует обновления, безопасность, оборудование?</li>
-          </ul>
-          <h3 class="modal-checklist-title">ФАКТИЧЕСКАЯ ЗАГРУЗКА</h3>
-          <ul class="modal-checklist-list">
-            <li>Как отслеживается рабочее время IT-сотрудников?</li>
-            <li>Есть ли данные об их загрузке и приоритетах?</li>
-          </ul>
-          <h3 class="modal-checklist-title">ОБНОВЛЕНИЯ И БЕЗОПАСНОСТЬ</h3>
-          <ul class="modal-checklist-list">
-            <li>Когда в последний раз обновлялась 1С?</li>
-            <li>Есть ли регламенты на резервное копирование?</li>
-            <li>Кто имеет доступ к базе данных?</li>
-          </ul>
-          <h3 class="modal-checklist-title">ИНЦИДЕНТЫ И ОШИБКИ</h3>
-          <ul class="modal-checklist-list">
-            <li>Как фиксируются технические проблемы?</li>
-            <li>Каков средний срок их устранения?</li>
-          </ul>
-          <h3 class="modal-checklist-title">ЗАТРАТЫ</h3>
-          <ul class="modal-checklist-list">
-            <li>Сколько стоит IT-функция компании в месяц?</li>
-            <li>Есть ли понимание, где деньги работают, а где — “сгорают”?</li>
-          </ul>
-          <h3 class="modal-checklist-title">ЗАВИСИМОСТИ</h3>
-          <ul class="modal-checklist-list">
-            <li>Есть ли “незаменимые” сотрудники?</li>
-            <li>Можете ли вы уволить 1 человека без риска для бизнеса?</li>
-          </ul>
-          <div class="modal-checklist-summary">
-            Итог: если хотя бы на 3 из 6 блоков вы не уверены — аудит необходим.
-          </div>
-        </div>
-      </div>
-      
-    </section>
+    
 
-    <section class="services-extra-section">
-      <div class="container">
-        <h2 class="services-extra-title">Можно дополнить услугами</h2>
-        <div class="services-extra-list">
-          <div class="service-card">
-            <div class="service-card-icon">
-              <img src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png" alt="Поддержка" />
-            </div>
-            <div class="service-card-content">
-              <div class="service-card-title">Поддержка 1С</div>
-              <div class="service-card-desc">Обновления, настройка, кастомизация</div>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-card-icon">
-              <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" alt="Аудит CI/CD" />
-            </div>
-            <div class="service-card-content">
-              <div class="service-card-title">Аутсорсинг IT-специалистов</div>
-              <div class="service-card-desc">Почасовая помощь по задачам</div>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-card-icon">
-              <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="DataOps" />
-            </div>
-            <div class="service-card-content">
-              <div class="service-card-title">Разработка решений под 1С</div>
-              <div class="service-card-desc"> Автоматизация под бизнес-процессы</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Секция: Готовы обсудить проект? -->
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
       <div class="container contact-container">
         <div class="contact-left">
           <h2 class="contact-title">Готовы обсудить проект?</h2>
@@ -487,5 +423,18 @@
 
     <script src="devops-timeline.js"></script>
     <script src="animation.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const heroBtn = document.querySelector('.hero-btn');
+        const contactSection = document.getElementById('contact');
+
+        if (heroBtn && contactSection) {
+          heroBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+          });
+        }
+      });
+    </script>
 </body>
 </html>

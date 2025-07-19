@@ -96,6 +96,68 @@ if (timelineWrapper && timeline) {
     });
   }
 
-  // Инициализация
+  // Таймлайн и форма — только внутри этого блока
   updateActiveStep();
+}
+
+// === Логика выбора города с поиском ===
+const cities = [
+  "Москва", "Санкт-Петербург", "Новосибирск", "Екатеринбург", "Казань", "Нижний Новгород", "Челябинск", "Самара", "Омск", "Ростов-на-Дону", "Уфа", "Красноярск", "Воронеж", "Пермь", "Волгоград", "Краснодар", "Саратов", "Тюмень", "Тольятти", "Ижевск", "Барнаул", "Ульяновск", "Иркутск", "Владивосток", "Ярославль", "Хабаровск", "Махачкала", "Оренбург", "Новокузнецк", "Томск", "Кемерово", "Рязань", "Астрахань", "Пенза", "Липецк", "Тула", "Киров", "Чебоксары", "Калининград", "Брянск", "Курск", "Иваново", "Магнитогорск", "Тверь", "Ставрополь", "Белгород", "Сочи", "Нижний Тагил", "Архангельск", "Владимир", "Чита", "Калуга", "Симферополь", "Смоленск", "Сургут", "Курган", "Орёл", "Вологда", "Череповец", "Якутск", "Грозный", "Саранск", "Тамбов", "Стерлитамак", "Кострома", "Новороссийск", "Петрозаводск", "Йошкар-Ола", "Нальчик", "Шахты", "Дзержинск", "Благовещенск", "Великий Новгород", "Псков", "Бийск", "Прокопьевск", "Балаково", "Рыбинск", "Северодвинск", "Армавир", "Подольск", "Энгельс", "Королёв", "Мурманск", "Сызрань", "Норильск", "Златоуст", "Каменск-Уральский", "Мытищи", "Люберцы", "Волгодонск", "Находка", "Петропавловск-Камчатский", "Копейск", "Нефтеюганск", "Березники", "Рубцовск", "Каменск-Шахтинский"
+];
+
+const regionBtn = document.getElementById('regionSelectBtn');
+const regionDropdown = document.getElementById('regionDropdown');
+const regionInput = document.getElementById('regionSearchInput');
+const regionList = document.getElementById('regionList');
+
+function renderCityList(filter = "") {
+  regionList.innerHTML = "";
+  const filtered = cities.filter(city => city.toLowerCase().includes(filter.toLowerCase()));
+  if (filtered.length === 0) {
+    const li = document.createElement('li');
+    li.textContent = 'Город не найден';
+    li.style.opacity = '0.7';
+    regionList.appendChild(li);
+    return;
+  }
+  filtered.forEach(city => {
+    const li = document.createElement('li');
+    li.textContent = city;
+    li.addEventListener('click', () => {
+      regionBtn.textContent = city;
+      regionDropdown.style.display = 'none';
+      localStorage.setItem('selectedCity', city);
+    });
+    regionList.appendChild(li);
+  });
+}
+
+if (regionBtn && regionDropdown && regionInput && regionList) {
+  // Открытие/закрытие
+  regionBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (regionDropdown.style.display === 'block') {
+      regionDropdown.style.display = 'none';
+    } else {
+      regionDropdown.style.display = 'block';
+      regionInput.value = '';
+      renderCityList();
+      regionInput.focus();
+    }
+  });
+  // Фильтрация
+  regionInput.addEventListener('input', () => {
+    renderCityList(regionInput.value);
+  });
+  // Закрытие по клику вне
+  document.addEventListener('click', (e) => {
+    if (!regionDropdown.contains(e.target) && e.target !== regionBtn) {
+      regionDropdown.style.display = 'none';
+    }
+  });
+  // Восстановление выбранного города
+  const saved = localStorage.getItem('selectedCity');
+  if (saved && cities.includes(saved)) {
+    regionBtn.textContent = saved;
+  }
 } 
