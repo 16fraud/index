@@ -563,19 +563,19 @@
 
 @media (max-width: 750px) {
   .hero-title {
-    font-size: 19px;
-    padding-right: 0;
+    font-size: 22px !important;
+    padding-right: 0 ;
   }
   .hero-subtitle {
-    font-size: 13px;
+    font-size: 15px ;
   }
   .reasons-title,
   .testimonials-title,
   .about-title {
-    font-size: 15px;
+    font-size: 18px ;
   }
   .about-content p {
-    font-size: 15px;
+    font-size: 14px ;
   }
 }
 
