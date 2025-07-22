@@ -1,3 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Inter', 'Segoe UI', 'Roboto', 'Arial', 'Helvetica Neue', sans-serif;
   font-weight: 400;
@@ -1945,6 +1953,105 @@ p{
   .audit-step-text {
     font-size: 0.98rem;
     padding: 12px 10px;
+  }
+}
+
+
+
+
+
+.about-section {
+  background: #f5f6fb;
+  padding: 80px 0 80px 0;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 38px;
+  color: #18191c;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(44,48,60,0.09);
+  padding: 48px 36px 36px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.about-content p {
+  font-size: 1.18rem;
+  color: #23272f;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.about-values {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-values li {
+  background: #ede9fe;
+  color: #7c3aed;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 1.05rem;
+  margin-bottom: 0;
+  box-shadow: 0 2px 8px rgba(124,58,237,0.07);
+}
+
+.about-stats {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin: 24px 0 0 0;
+}
+
+.about-stats .stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-stats .stat-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #6366f1;
+  margin-bottom: 4px;
+}
+
+.about-stats .stat-label {
+  font-size: 0.95rem;
+  color: #6b7280;
+  text-transform: none;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .about-content {
+    padding: 32px 12px 24px 12px;
+  }
+  .about-stats {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .about-values {
+    gap: 12px;
   }
 }
 

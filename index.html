@@ -10,18 +10,18 @@
 </head>
 <body>
 
+  <div id="home"></div>
   <div class="mobile-menu-overlay"></div>
   <nav class="mobile-menu">
     <button class="mobile-menu-close" aria-label="Закрыть меню">
       <svg width="32" height="32" viewBox="0 0 32 32"><line x1="8" y1="8" x2="24" y2="24" stroke="#23272f" stroke-width="2" stroke-linecap="round"/><line x1="24" y1="8" x2="8" y2="24" stroke="#23272f" stroke-width="2" stroke-linecap="round"/></svg>
     </button>
     <ul class="mobile-menu-list">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Research</a></li>
-      <li><a href="#">Content</a></li>
-      <li><a href="#">Company</a></li>
+      <li><a href="#home">Главная</a></li>
+      <li><a href="#services">Услуги</a></li>
+      <li><a href="#about">О нас</a></li>
     </ul>
-    <a href="#" class="btn mobile-menu-btn">Get started</a>
+    <a href="#" class="btn mobile-menu-btn">Заказать звонок</a>
   </nav>
   <header class="main-header">
     <div class="region-select-bar">
@@ -50,9 +50,9 @@
           </button>
           <nav class="main-nav" id="mainNav">
             <ul>
-              <li><a href="#">Главная</a></li>
-              <li><a href="#">Услуги</a></li>
-              <li><a href="#">О нас</a></li>
+              <li><a href="#home">Главная</a></li>
+              <li><a href="#services">Услуги</a></li>
+              <li><a href="#about">О нас</a></li>
             </ul>
           </nav>
           <a href="#" class="btn">Заказать звонок</a>
@@ -92,7 +92,7 @@
 
    
 
-    <div class="reasons-bg">
+    <div class="reasons-bg" id="services">
       <div class="container reasons-container">
         <h2 class="reasons-title">Услуги</h2>
         <div class="reasons-list">
@@ -138,12 +138,12 @@
               <div class="reason-card-text">
                 <p>Эксперты не могут постоянно проверять данные, из-за чего тесты теряют актуальность.</p>
               </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
+     
     <section class="section-dark">
       <div class="container">
         <h2 class="dark-section-title">IT-аудит, который экономит ваш бюджет</h2>
@@ -187,7 +187,7 @@
             </p>
           </div>
         </div>
-        
+
       </div>
     </section>
 
@@ -368,7 +368,33 @@
     
 
 
-    
+    <section class="about-section" id="about">
+      <div class="container">
+        <h2 class="about-title">О нас</h2>
+        <div class="about-content">
+          <p>Мы — команда экспертов в области IT-аудита и автоматизации. Помогаем бизнесу выявлять слабые места, оптимизировать процессы и экономить бюджет. Наша миссия — сделать IT-процессы прозрачными и управляемыми для каждого клиента.</p>
+          <ul class="about-values">
+            <li>Прозрачность и честность</li>
+            <li>Быстрый и понятный результат</li>
+            <li>Экономия и безопасность</li>
+          </ul>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number">300+</span>
+              <span class="stat-label">успешных аудитов</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">40%</span>
+              <span class="stat-label">экономия бюджета клиентов</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">3 дня</span>
+              <span class="stat-label">на аудит</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
     <!-- Секция: Готовы обсудить проект? -->
@@ -423,18 +449,6 @@
 
     <script src="devops-timeline.js"></script>
     <script src="animation.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const heroBtn = document.querySelector('.hero-btn');
-        const contactSection = document.getElementById('contact');
-
-        if (heroBtn && contactSection) {
-          heroBtn.addEventListener('click', function(event) {
-            event.preventDefault();
-            contactSection.scrollIntoView({ behavior: 'smooth' });
-          });
-        }
-      });
-    </script>
+  
 </body>
 </html>

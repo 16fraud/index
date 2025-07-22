@@ -126,6 +126,12 @@
 }
 
 @media (max-width: 750px) {
+  .bg-decor--right {
+    display: none !important;
+  }
+}
+
+@media (max-width: 750px) {
   .container {
     width: 100%;
     max-width: 100%;
@@ -534,6 +540,24 @@
     font-size: 0.82rem !important;
     margin: 40px 0 !important;
     text-align: center !important;
+  }
+}
+
+
+
+
+
+
+@media (max-width: 750px) {
+  .logo img {
+    height: 60px !important;
+    max-width: 120px !important;
+  }
+}
+
+@media (max-width: 750px) {
+  .region-select-bar {
+    display: none !important;
   }
 }
 

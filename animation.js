@@ -99,3 +99,75 @@
     }
   });
 })(); 
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Плавный скролл для кнопки 'Консультация'
+  const heroBtn = document.querySelector('.hero-btn');
+  const contactSection = document.getElementById('contact');
+  if (heroBtn && contactSection) {
+    heroBtn.addEventListener('click', function(event) {
+      event.preventDefault();
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+  // Плавный скролл для ссылки 'Услуги' в шапке
+  const servicesLink = document.querySelector('.main-nav a[href="#services"]');
+  const servicesSection = document.getElementById('services');
+  if (servicesLink && servicesSection) {
+    servicesLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+  // Плавный скролл для ссылки 'Услуги' в мобильном меню
+  const mobileServicesLink = document.querySelector('.mobile-menu-list a[href="#services"]');
+  if (mobileServicesLink && servicesSection) {
+    mobileServicesLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+      document.body.classList.remove('mobile-menu-open');
+      document.querySelector('.mobile-menu').classList.remove('active');
+      document.querySelector('.mobile-menu-overlay').classList.remove('active');
+    });
+  }
+  // Плавный скролл для ссылки 'О нас' в шапке
+  const aboutLink = document.querySelector('.main-nav a[href="#about"]');
+  const aboutSection = document.querySelector('.about-section');
+  if (aboutLink && aboutSection) {
+    aboutLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+  // Плавный скролл для ссылки 'О нас' в мобильном меню
+  const mobileAboutLink = document.querySelector('.mobile-menu-list a[href="#about"]');
+  if (mobileAboutLink && aboutSection) {
+    mobileAboutLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+      document.body.classList.remove('mobile-menu-open');
+      document.querySelector('.mobile-menu').classList.remove('active');
+      document.querySelector('.mobile-menu-overlay').classList.remove('active');
+    });
+  }
+  // Плавный скролл для ссылки 'Главная' в шапке
+  const homeLink = document.querySelector('.main-nav a[href="#home"]');
+  const heroSection = document.querySelector('.hero-section');
+  if (homeLink && heroSection) {
+    homeLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      heroSection.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+  // Плавный скролл для ссылки 'Главная' в мобильном меню
+  const mobileHomeLink = document.querySelector('.mobile-menu-list a[href="#home"]');
+  if (mobileHomeLink && heroSection) {
+    mobileHomeLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      heroSection.scrollIntoView({ behavior: 'smooth' });
+      document.body.classList.remove('mobile-menu-open');
+      document.querySelector('.mobile-menu').classList.remove('active');
+      document.querySelector('.mobile-menu-overlay').classList.remove('active');
+    });
+  }
+  });
