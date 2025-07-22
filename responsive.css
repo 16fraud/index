@@ -561,4 +561,22 @@
   }
 }
 
+@media (max-width: 750px) {
+  .hero-title {
+    font-size: 1.5rem !important;
+    padding-right: 0 !important;
+  }
+  .hero-subtitle {
+    font-size: 1rem !important;
+  }
+  .reasons-title,
+  .testimonials-title,
+  .about-title {
+    font-size: 1.3rem !important;
+  }
+  .about-content p {
+    font-size: 1rem !important;
+  }
+}
+
 
