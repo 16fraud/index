@@ -548,35 +548,4 @@
 
 
 
-@media (max-width: 750px) {
-  .logo img {
-    height: 60px !important;
-    max-width: 120px !important;
-  }
-}
-
-@media (max-width: 750px) {
-  .region-select-bar {
-    display: none !important;
-  }
-}
-
-@media (max-width: 750px) {
-  .hero-title {
-    font-size: 22px !important;
-    padding-right: 0 ;
-  }
-  .hero-subtitle {
-    font-size: 15px ;
-  }
-  .reasons-title,
-  .testimonials-title,
-  .about-title {
-    font-size: 18px ;
-  }
-  .about-content p {
-    font-size: 14px ;
-  }
-}
-
 
